@@ -6,8 +6,6 @@ http://www.johnpapa.net/how-to-use-npm-global-without-sudo-on-osx/
 
 '''bash
 
-npm install -g tldr yo grunt gulp webpack browserify express forever generator-aspnet generator-meanjs ionic iron-node mocha node-inspector mongodb mongoose
+npm install -g tldr yo grunt gulp webpack browserify express forever generator-aspnet generator-meanjs ionic iron-node mocha node-inspector mongodb mongoose  azure-cli bower cordova cowsay currying-workshopper expressworks firebase-tools forever functional-javascript-workshop generator-angular generator-karma git-open grunt-cli http-server ionic ios-deploy ios-sim is-up-cli jison jscs jshint json-server learnyoumongo learnyounode nodemon promise-it-wont-hurt tedious test-anything tldr tower-of-babel trymodule ttystudio typescript uglify-js
 
 '''
-
-sometimes the modules in the .node directory cannot be found so I also put them in the 

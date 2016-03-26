@@ -1,4 +1,4 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                               To remember                               "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " <ctrl+w>  backwards kill word
@@ -10,8 +10,8 @@
 "-----------------------------------------------------------------------------
 " Global Stuff
 "-----------------------------------------------------------------------------
+cd ~/Dropbox/dev
 
-" no vi
 set nocompatible
 filetype off                  " required
 
@@ -25,12 +25,16 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 " For Haskell Programming
 Plugin 'eagletmt/ghcmod-vim'
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
+Plugin 'simplenote.vim'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-surround'
+Plugin 'scrooloose/nerdtree'
+Plugin 'vim-airline/vim-airline'
+Plugin 'Raimondi/delimitMate'
+Plugin 'ternjs/tern_for_vim'
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
 " Git plugin not hosted on GitHub
@@ -216,7 +220,8 @@ vnoremap <tab> %
 " Command + Enter doesnt disturb line for css
 inoremap <D-CR> <C-O>o
 inoremap <D-S-CR> <esc>:/}<cr>o<cr><esc>:nohls<cr>cc
-
+" this is for delimitMate
+inoremap {<CR> {<CR>}<C-o>O
 " Autoclose setting
 let AutoCloseExpandEnterOn = '{'
 
@@ -282,3 +287,5 @@ set background=dark
 colorscheme hybrid
 
 :nohls
+
+autocmd VimEnter * NERDTree
