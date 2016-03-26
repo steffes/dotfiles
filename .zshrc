@@ -6,6 +6,8 @@ export ZSH=/Users/alex/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="robbyrussell"
+#ZSH_THEME="agnoster"
+#ZSH_THEME="powerline"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -49,12 +51,15 @@ plugins=(git)
 
 # User configuration
 
-export PATH="/Users/alex/.dnx/runtimes/dnx-mono.1.0.0-beta4/bin:/Users/alex/.node/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+#export PATH="/Users/alex/.dnx/runtimes/dnx-mono.1.0.0-beta4/bin:/Users/alex/.node/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+ # Load dnvm
+export PATH="$HOME/.node/bin:$PATH"
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
+
+function code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $*; }
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
-
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
@@ -77,12 +82,13 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # My aliases
-alias 0sh="cd ~/Dropbox/0shkosh"
+alias osh="cd ~/Dropbox/0shkosh"
 alias cddev="cd ~/Dropbox/dev"
 alias cdionic="cd ~/Dropbox/dev/ionic"
 alias cdjs="cd ~/Dropbox/dev/js"
-
+alias cdgh="cd ~/GitHub"
 alias postgres-app="'/Applications/Postgres.app/Contents/Versions/9.4/bin'/psql -p5432"
+alias npm-list="npm list -g --depth=0"
 
 
 # alias ohmyzsh="mate ~/.oh-my-zsh"
