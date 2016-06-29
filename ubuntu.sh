@@ -8,4 +8,5 @@ mplayer libncurses-ui-perl \
 libmp3-info-perl libogg-vorbis-header-pureperl-perl \
 ibaudio-flac-header-perl libfile-mimeinfo-perl \
 
+# minimal audio player
 git clone https://github.com/ap0calypse/whistle.git
