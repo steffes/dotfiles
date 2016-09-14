@@ -23,18 +23,21 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
-" For Haskell Programming
-Plugin 'eagletmt/ghcmod-vim'
+
 " plugin on GitHub repo
 Plugin 'simplenote.vim'
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdtree'
-Plugin 'vim-airline/vim-airline'
+Plugin 'powerline/powerline'
 Plugin 'Raimondi/delimitMate'
 Plugin 'ternjs/tern_for_vim'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+"Plugin 'ryanoasis/vim-devicons'
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
 " Git plugin not hosted on GitHub
@@ -59,6 +62,12 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+
+" Powerline settings
+set guifont=Inconsolata\ for\ Powerline\ Nerd\ Font\ Mono:h14
+set encoding=utf8
+let g:airline_powerline_fonts=1
+let g:airline#extensions#tabline#enabled = 1
 
 " Get pathogen up and running
 call pathogen#infect()
@@ -95,7 +104,7 @@ set softtabstop=4
 set expandtab
 set autoindent
 
-" Ruby is 2 spaces
+"€ı,€ı, Ruby is 2 spaces
 autocmd FileType ruby setlocal softtabstop=2 shiftwidth=2 tabstop=2
 autocmd FileType scss setlocal softtabstop=4 shiftwidth=4 tabstop=4
 
@@ -103,7 +112,7 @@ autocmd FileType scss setlocal softtabstop=4 shiftwidth=4 tabstop=4
 if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
     \| exe "normal g'\"" | endif
-endif
+
 
 " set the search scan to wrap lines
 set wrapscan
@@ -282,10 +291,11 @@ set nocursorcolumn
 " Set up the window colors and size
 "-----------------------------------------------------------------------------
 
-set guifont=Consolas:h14
+"set guifont=Consolas:h14
 set background=dark
 colorscheme hybrid
 
 :nohls
 
 autocmd VimEnter * NERDTree
+:endif
