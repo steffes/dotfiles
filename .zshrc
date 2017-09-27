@@ -82,9 +82,7 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # My aliases
-alias osh="cd ~/Dropbox/0shkosh"
 alias cddev="cd ~/Dropbox/dev"
-alias cdionic="cd ~/Dropbox/dev/ionic"
 alias cdjs="cd ~/Dropbox/dev/js"
 alias cdgh="cd ~/GitHub"
 alias postgres-app="'/Applications/Postgres.app/Contents/Versions/9.4/bin'/psql -p5432"

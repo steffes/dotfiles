@@ -1,4 +1,4 @@
-## Commands ran for things to work properly
+## MacVim config
 
 
 getting YouCompleteMe to work with MacVim

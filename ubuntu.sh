@@ -1,4 +1,4 @@
-
+# Ubuntu Desktop Configuration
 # change chrome to use system buttons
 gconftool-2 --set /apps/metacity/general/button_layout --type string ":minimize,maximize,close"
 
